@@ -33,6 +33,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         print(roomAssignmentsForSpeakers([speakers[0]]))
         print(roomAssignmentsForSpeakers(speakers))
         print(getRoomCapacitiesForAllSpeakers())
+        print(audienceSizesForSpeakers([speakers[0]]))
+        print(audienceSizesForSpeakers(["Inigo Montoya"]))
+        print(audienceSizesForSpeakers(speakers))
+        
+        
         // do not alter
         return true  //
     }   //////////////

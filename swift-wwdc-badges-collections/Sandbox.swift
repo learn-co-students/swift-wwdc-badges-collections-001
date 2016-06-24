@@ -65,4 +65,17 @@ func getRoomCapacitiesForAllSpeakers() -> [String: Int] {
     return roomCapacityBySpeaker
 }
 
-
+func audienceSizesForSpeakers(speakers: [String]) -> [String] {
+    let roomCapacityBySpeaker = getRoomCapacitiesForAllSpeakers()
+    var audeinceSizeForSpeaker = ""
+    var audienceSizesBySpeakers = [String]()
+    for speaker in speakers {
+        if let roomCapacity = roomCapacityBySpeaker[speaker] {
+            audeinceSizeForSpeaker = "\(speaker) can speak to up to \(roomCapacity) people."
+        } else {
+            audeinceSizeForSpeaker = "Room information not found for \(speaker)"
+        }
+        audienceSizesBySpeakers.append(audeinceSizeForSpeaker)
+    }
+    return audienceSizesBySpeakers
+}
