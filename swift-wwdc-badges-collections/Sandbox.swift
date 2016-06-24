@@ -43,3 +43,26 @@ func roomAssignmentsForSpeakers(speakers: [String]) -> [String] {
     }
     return speakerRoomAssignments
 }
+
+let roomCapacities: [Int: Int] = [
+    201: 40,
+    202: 50,
+    203: 70,
+    204: 20,
+    215: 30,
+    230: 80,
+    240: 35,
+    260: 60
+]
+
+func getRoomCapacitiesForAllSpeakers() -> [String: Int] {
+    var roomCapacityBySpeaker = [String: Int]()
+    for (speaker, roomAssignment) in roomAssignments {
+        if let roomCapacity = roomCapacities[roomAssignment] {
+            roomCapacityBySpeaker[speaker] = roomCapacity
+        }
+    }
+    return roomCapacityBySpeaker
+}
+
+

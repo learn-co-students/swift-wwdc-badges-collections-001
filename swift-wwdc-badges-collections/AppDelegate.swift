@@ -32,7 +32,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         print(roomAssignmentsForSpeakers([]))
         print(roomAssignmentsForSpeakers([speakers[0]]))
         print(roomAssignmentsForSpeakers(speakers))
-        
+        print(getRoomCapacitiesForAllSpeakers())
         // do not alter
         return true  //
     }   //////////////
